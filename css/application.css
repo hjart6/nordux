@@ -1,0 +1,260 @@
+/*
+* Better function for color palettes using Sass maps
+* Link: http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
+* Usage: color: palette(brand,tan);
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+body {
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+  background-color: #f6f6f6; }
+
+.sitewidth, nav, .text-container, .focal, .desc, .flex-container {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto; }
+
+#navcontainer {
+  background-color: white; }
+
+nav {
+  padding: 1em 0 2.5em 0; }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; }
+    nav ul li {
+      display: inline;
+      padding: 10px; }
+    nav ul a {
+      text-decoration: none;
+      color: black; }
+  nav:first-child ul {
+    float: left; }
+    nav:first-child ul li {
+      border-bottom: solid 0.2em rgba(30, 144, 255, 0);
+      margin-right: 20px;
+      padding: 0;
+      -webkit-transition: border 500ms ease;
+      -moz-transition: border 500ms ease;
+      -ms-transition: border 500ms ease;
+      -o-transition: border 500ms ease;
+      transition: border 500ms ease; }
+      nav:first-child ul li a.selected {
+        border-bottom: solid 0.2em #002734; }
+      nav:first-child ul li:hover {
+        border-bottom: solid 0.2em rgba(0, 39, 52, 0.3); }
+
+#header-container {
+  background: linear-gradient(rgba(20, 20, 20, 0.3), rgba(20, 20, 20, 0.3)), url("../img/oyvind.jpg"); }
+  #header-container h1 {
+    margin: .2em 0em 0em 0em; }
+
+#header-container, #about-container {
+  background-color: #0E6472;
+  background-size: 120%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  padding: 3em;
+  margin-right: auto;
+  margin-left: auto;
+  background-position: 0% 58%; }
+
+#about-container {
+  background: linear-gradient(rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("../img/contact.jpg");
+  background-position: 0% 100%;
+  background-size: 130%; }
+  #about-container h1 {
+    margin: .2em 0em 0em 0em; }
+
+.focal h1 {
+  margin: .2em 0em 0em 0em; }
+
+h1 {
+  color: #0E6472;
+  font-size: 450%; }
+  h1 a {
+    color: #0E6472;
+    text-decoration: none; }
+  h1:hover {
+    text-decoration: underline; }
+
+svg {
+  display: inline-block;
+  fill: #0E6472;
+  -webkit-transition: ease-in 200ms;
+  /* Safari */
+  transition: ease-in 200ms;
+  -webkit-transition: ease-out 200ms;
+  /* Safari */
+  transition: ease-out 200ms; }
+
+h1:hover svg {
+  margin-bottom: -.15em; }
+
+.desc {
+  padding: 2em; }
+
+p:first-of-type {
+  display: inline-; }
+
+h2 {
+  font-size: 250%;
+  text-align: left;
+  margin: 0em 0em 0em 0em; }
+
+.desc p {
+  margin-top: 0;
+  background-color: #0E6472;
+  color: white;
+  width: 56%;
+  font-size: 1.3em;
+  line-height: 1.5;
+  padding: 1em; }
+
+.flex-container {
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 1em;
+  color: #f6f6f6; }
+  .flex-container p {
+    color: darkslategray;
+    line-height: 1.5; }
+
+.case {
+  background-color: white;
+  margin-top: 0; }
+  .case img {
+    display: block; }
+
+.right, i {
+  color: #192E5B;
+  padding: .2em; }
+
+.right {
+  opacity: 0;
+  float: right;
+  margin: .35em .1em;
+  border: solid #192E5B;
+  border-width: 0 5px 5px 0;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -webkit-transition: ease-in 200ms;
+  /* Safari */
+  transition: ease-in 200ms; }
+
+.ingredients {
+  -webkit-align-self: flex-start;
+  align-self: flex-start;
+  flex: 5;
+  margin-right: 1.1em;
+  text-decoration: none; }
+  .ingredients .step-header img {
+    width: 100%;
+    filter: grayscale(100%);
+    margin: 0;
+    --webkit-transition: $seconds -webkit-filter linear;
+    -moz-transition: 300ms -moz-filter linear;
+    -moz-transition: 300ms filter linear;
+    -ms-transition: 300ms -ms-filter linear;
+    -o-transition: 300ms -o-filter linear;
+    transition: 300ms filter linear, 300ms -webkit-filter linear; }
+  .ingredients h2 {
+    color: #192E5B;
+    border-bottom: solid 5px rgba(25, 46, 91, 0);
+    -webkit-transition: border 300ms ease;
+    -moz-transition: border 300ms ease;
+    -ms-transition: border 300ms ease;
+    -o-transition: border 300ms ease;
+    transition: border 300ms ease; }
+    .ingredients h2:hover {
+      border-bottom: solid 5px #192e5b; }
+      .ingredients h2:hover .right {
+        opacity: 1; }
+  .ingredients:hover img {
+    filter: grayscale(0%); }
+  .ingredients:hover a {
+    color: #192E5B; }
+  .ingredients h3 {
+    color: #192E5B;
+    font-size: 200%;
+    text-align: center;
+    width: auto; }
+  .ingredients ul {
+    list-style: none;
+    text-align: center;
+    padding: 1em; }
+    .ingredients ul li {
+      margin-bottom: 2em; }
+
+.case {
+  background-color: white;
+  flex-flow: row wrap;
+  align-self: flex-start;
+  flex: 1; }
+  .case img {
+    width: 100%; }
+  .case h2 {
+    font-size: 200%; }
+  .case p {
+    font-size: 90%; }
+
+.step-header {
+  font-size: 1.2em;
+  display: block;
+  padding: 1em;
+  padding-bottom: 0; }
+  .step-header a, .step-header h2 {
+    color: #192E5B;
+    text-decoration: none; }
+
+.case-p {
+  font-size: 1.3em;
+  margin-top: 0;
+  margin-bottom: .5em; }
+
+#signup {
+  line-height: 180%;
+  color: black;
+  font-size: 1.2em; }
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  font-size: 1.1em;
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical;
+  /* Allow the user to vertically resize the textarea (not horizontally) */ }
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #0E6472;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  font-size: 1.1em;
+  border-radius: 4px;
+  cursor: pointer; }
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #192E5B; }
+
+/* Add a background color and some padding around the form */
+#signup {
+  border-radius: 5px;
+  padding: 10px 40px; }
+
+/*# sourceMappingURL=application.css.map */

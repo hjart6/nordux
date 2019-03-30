@@ -1,0 +1,47 @@
+/*
+* Better function for color palettes using Sass maps
+* Link: http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
+* Usage: color: palette(brand,tan);
+*/
+@function palette($palette, $tone: 'base') {
+    @return map-get( map-get($palettes, $palette), $tone );
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin ease-in($seconds){
+	-webkit-transition: ease-in$seconds; /* Safari */
+    transition: ease-in$seconds;
+}
+
+@mixin ease-out($seconds){
+	-webkit-transition: ease-out$seconds; /* Safari */
+    transition: ease-out$seconds;
+}
+
+@mixin transition-border($seconds){
+	  -webkit-transition: border $seconds ease;
+  -moz-transition: border $seconds ease;
+  -ms-transition: border $seconds ease;
+  -o-transition: border $seconds ease;
+  transition: border $seconds ease; 
+}
+
+@mixin transition-filter($seconds){
+	  --webkit-transition: $seconds -webkit-filter linear;
+-moz-transition: $seconds -moz-filter linear;
+-moz-transition: $seconds filter linear;
+-ms-transition: $seconds -ms-filter linear;
+-o-transition: $seconds -o-filter linear;
+transition: $seconds filter linear, $seconds -webkit-filter linear;
+}
+
+@mixin background($bgcolor, $color){
+    background-color: $bgcolor;
+    color: $color;
+}
