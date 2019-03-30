@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/nordux/public_html/
+    - export DEPLOYPATH=/home/norduxno/public_html
     - /bin/cp -r * $DEPLOYPATH
